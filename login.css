@@ -1,0 +1,250 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: black;
+   color: white;
+   background-image: url('images/galaxybackgroundimage.jpg');
+   background-size: cover;
+}
+
+.navbar{
+    height:60px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Sen",sans-serif;
+   
+    
+}
+.logo{
+    color: red;
+    font-size: 30px;
+    height:30px; 
+    cursor: pointer;
+    padding-left: 60px;
+    font-family: "Sen",sans-serif;
+}
+.navbar-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+    
+}
+.navbar-container a{
+    text-decoration: none;
+    color: white;
+    padding: 0 40px;
+    font-size: 18px;
+}
+
+.main-container{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+ }
+
+.container{
+    background-color: #151515;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #151515;
+    position: relative;
+    width: 750px;
+    max-width: 100%;
+    min-height: 480px;
+}
+.container p{
+    margin: 20px 0;
+}
+.container a{
+    text-decoration: none;
+    color: white;
+    margin:15px 0 10px;
+}
+
+.container button{
+    background-color: red;
+    border-radius: 8px;
+    padding: 10px 40px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+
+.container button.hidden{
+    background-color: transparent;
+   
+    border:2px solid black
+}
+
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input.btn{
+    background-color: red;
+    border-radius: 8px;
+    padding: 10px 40px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family:  Arial, Helvetica, sans-serif;
+    width:auto;
+}
+.container input{
+    background-color:#eee ;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 10px 0 ;
+    border:none;
+    outline: none;
+    width: 100%;
+}
+.form-container{
+    position: absolute;
+    top:0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in{
+    left:0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.active .sign-in{
+    transform: translateX(100%);
+    opacity: 0;
+
+}
+
+.sign-up{
+    left:0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move {
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+    
+}
+
+.social-icons{
+    margin: 20px 0px;
+}
+
+.social-icons a{
+    border:1px solid black;
+    border-radius:5px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    padding: 8px;
+}
+
+
+.toggle-container{
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 20px 20px 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 20px 150px 100px 20px;
+
+}
+
+.toggle{
+    background-color: red;
+    height: 100%;
+    color: white;
+    position: relative;
+    left: -100%;
+    height:100%;
+    width:200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle{
+    transform: translateX(50%);
+}
+
+
+.toggle-panel{
+    position: absolute;
+    width:50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+.toggle-right{
+    transform: translateX(0);
+    right:0;
+}
+
+.container.active .toggle-left{
+    left:0;
+    transform: translateX(0);
+}
+.container.active .toggle-right{
+    right:0;
+    transform: translateX(200%);
+}
+

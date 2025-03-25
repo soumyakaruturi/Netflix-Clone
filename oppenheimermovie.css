@@ -1,0 +1,77 @@
+*{
+    margin:0;
+
+}
+body{
+    background-color: black;
+  
+    font-family: "Sen",sans-serif;
+
+    
+}
+.container{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.playmovie video{
+    
+    height:600px;
+    width:1100px
+} 
+
+.relatedmovies{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.relatedmovies h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+.movies-list{
+    position: relative;
+}
+
+.movies-list-img{
+    height: 180px;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 1s ease-in-out 0.2s;
+}
+.movies-list:hover .movies-list-img{
+    transform: scale(1.1);
+}
+.movies-list:hover .movies-list-button {
+    
+    opacity: 1;
+}
+.movies-list-button{
+    position: absolute;
+    bottom: 30px;
+    left:25px;
+    padding:10px 15px;
+    border-radius: 10px;
+    border: none;
+    font-weight:bold;
+    font-size: medium;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s ease-in-out 0.2s;
+}
+
+
+
+.playmovie h1{
+    margin:10px;
+}
+.playmovie b{
+    color: rgb(74, 69, 69);
+}
+.playmovie p{
+    margin: 40px 15px;
+    max-width: 1000px;
+}
